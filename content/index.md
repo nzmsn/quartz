@@ -1,8 +1,6 @@
 ---
-title: Welcome to Quartz
+title: 私のWiki
 ---
-# 私のWiki
-
 個人的なWikiサイトです。
 
 ## ページ
