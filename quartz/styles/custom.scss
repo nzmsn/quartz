@@ -1,3 +1,84 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+/* ========================================
+   見出しに番号を振る
+   ======================================== */
+
+article {
+  counter-reset: h1 h2 h3 h4 h5 h6;
+}
+
+/* H1 */
+article h1 {
+  counter-increment: h1;
+  counter-reset: h2 h3 h4 h5 h6;
+}
+
+article h1::before {
+  content: counter(h1) " ";
+}
+
+/* H2 */
+article h2 {
+  counter-increment: h2;
+  counter-reset: h3 h4 h5 h6;
+}
+
+article h2::before {
+  content: counter(h1) "-" counter(h2) " ";
+}
+
+/* H3 */
+article h3 {
+  counter-increment: h3;
+  counter-reset: h4 h5 h6;
+}
+
+article h3::before {
+  content: counter(h1) "-" counter(h2) "-" counter(h3) " ";
+}
+
+/* H4 */
+article h4 {
+  counter-increment: h4;
+  counter-reset: h5 h6;
+}
+
+article h4::before {
+  content:
+    counter(h1) "-"
+    counter(h2) "-"
+    counter(h3) "-"
+    counter(h4) " ";
+}
+
+/* H5 */
+article h5 {
+  counter-increment: h5;
+  counter-reset: h6;
+}
+
+article h5::before {
+  content:
+    counter(h1) "-"
+    counter(h2) "-"
+    counter(h3) "-"
+    counter(h4) "-"
+    counter(h5) " ";
+}
+
+/* H6 */
+article h6 {
+  counter-increment: h6;
+}
+
+article h6::before {
+  content:
+    counter(h1) "-"
+    counter(h2) "-"
+    counter(h3) "-"
+    counter(h4) "-"
+    counter(h5) "-"
+    counter(h6) " ";
+}
