@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "plugins": {
+    "quartz-heading-redirect": {
+      "source": "https://github.com/nzmsn/quartz-heading-redirect",
+      "resolved": "https://github.com/nzmsn/quartz-heading-redirect",
+      "commit": "edd03c8a30951e526d9942ad480dfeaf9f784280",
+      "installedAt": "2026-10-25T10:54:17.408Z"
+    }
+  }
+}

@@ -128,6 +128,9 @@ plugins:
       display: all
   - source: "@quartz-community/alias-redirects"
     enabled: true
+  - source: "https://github.com/nzmsn/quartz-heading-redirect"
+    enabled: true
+    order: 90
   - source: "@quartz-community/content-index"
     enabled: true
     options:
@@ -256,6 +259,10 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
+  - source: https://github.com/nzmsn/quartz-heading-redirect
+    enabled: true
+    options: {}
+    order: 90
 layout:
   groups:
     toolbar:
