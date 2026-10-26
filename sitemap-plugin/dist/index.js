@@ -5864,7 +5864,7 @@ var example_default = "/* PC / tablet: show the normal sitemap sidebar */\n.site
 var ExampleComponent_default = (() => {
   const Component = (props) => {
     const sitemap = props.allFiles.find(
-      (file) => file.slug === "\u30B5\u30A4\u30C8\u30DE\u30C3\u30D7"
+      (file) => file.slug === "sidebar"
     );
     if (!sitemap?.htmlAst) {
       return null;
