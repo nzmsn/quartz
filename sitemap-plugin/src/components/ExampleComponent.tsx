@@ -11,7 +11,7 @@ import style from "./styles/example.scss";
 export default (() => {
   const Component: QuartzComponent = (props: QuartzComponentProps) => {
     const sitemap = props.allFiles.find(
-      (file) => file.slug === "サイトマップ"
+      (file) => file.slug === "sidebar"
     );
 
     if (!sitemap?.htmlAst) {
