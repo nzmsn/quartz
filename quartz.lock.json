@@ -6,6 +6,15 @@
       "resolved": "https://github.com/nzmsn/quartz-heading-redirect",
       "commit": "6c614e96a4c88080b707c09823c390bd1d5d07a6",
       "installedAt": "2026-10-26T03:22:25.086Z"
+    },
+    "sitemap": {
+      "source": {
+        "repo": "./sitemap-plugin",
+        "name": "sitemap"
+      },
+      "resolved": "C:\\Users\\hakaw\\quartz\\sitemap-plugin",
+      "commit": "local",
+      "installedAt": "2026-10-26T08:28:48.033Z"
     }
   }
 }

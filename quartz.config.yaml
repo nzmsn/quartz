@@ -151,7 +151,7 @@ plugins:
   - source: "@quartz-community/tag-page"
     enabled: true
   - source: "@quartz-community/explorer"
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 50
@@ -259,6 +259,15 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
+  - source:
+      repo: ./sitemap-plugin
+      name: sitemap
+    enabled: true
+    options: {}
+    order: 50
+    layout:
+      position: left
+      priority: 50
 layout:
   groups:
     toolbar:
