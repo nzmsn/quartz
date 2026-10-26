@@ -2133,6 +2133,9 @@ function u2(e2, t2, n2, o2, i2, u3) {
   return l.vnode && l.vnode(l2), l2;
 }
 
+// src/components/styles/example.scss
+var example_default = "/* PC / tablet: show the normal sitemap sidebar */\n.sitemap-desktop {\n  display: block;\n}\n\n/* Mobile menu is hidden by default */\n.sitemap-mobile-menu {\n  display: none;\n}\n\n/* Quartz mobile breakpoint */\n@media all and (max-width: 800px) {\n  .left.sidebar {\n    flex-wrap: wrap;\n    justify-content: flex-start;\n    align-items: center;\n  }\n  .left.sidebar > .page-title {\n    margin-left: 3.5rem;\n    width: calc(100% - 3.5rem);\n    margin-bottom: 0.5rem;\n    transform: translateY(-0.5rem);\n  }\n  .left.sidebar > .flex-component {\n    width: 100%;\n  }\n  /* Let the search component fill its flex item */\n  .left.sidebar > .flex-component > div:first-child .search {\n    width: 100%;\n    max-width: none;\n  }\n  .left.sidebar > .flex-component > div:first-child .search-button {\n    width: 100%;\n  }\n  /* Hide the normal sidebar */\n  .sitemap-desktop {\n    display: none;\n  }\n  /* Show the hamburger menu */\n  .sitemap-mobile-menu {\n    display: block;\n    position: fixed;\n    top: 1.5rem;\n    left: 1rem;\n    right: auto;\n    z-index: 1000;\n  }\n  /* Hamburger button */\n  .sitemap-menu-button {\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    width: 2.5rem;\n    height: 2.5rem;\n    box-sizing: border-box;\n    padding: 0;\n    font-size: 1.6rem;\n    line-height: 1;\n    cursor: pointer;\n    list-style: none;\n    user-select: none;\n    background: var(--light);\n    border: 1px solid var(--lightgray);\n    border-radius: 6px;\n  }\n  .sitemap-menu-button::-webkit-details-marker {\n    display: none;\n  }\n  /* Sitemap panel shown after tapping the button */\n  .sitemap-menu-panel {\n    position: fixed;\n    top: 4rem;\n    left: 1rem;\n    right: auto;\n    width: min(80vw, 320px);\n    max-height: 75vh;\n    overflow-y: auto;\n    padding: 1rem;\n    background: var(--light);\n    border: 1px solid var(--lightgray);\n    border-radius: 8px;\n    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);\n  }\n}";
+
 // src/components/ExampleComponent.tsx
 var ExampleComponent_default = (() => {
   const Component = (props) => {
@@ -2140,18 +2143,22 @@ var ExampleComponent_default = (() => {
       (file) => file.slug === "\u30B5\u30A4\u30C8\u30DE\u30C3\u30D7"
     );
     if (!sitemap?.htmlAst) {
-      return /* @__PURE__ */ u2("div", { class: "sitemap-sidebar", children: [
-        /* @__PURE__ */ u2("h3", { children: "\u30B5\u30A4\u30C8\u30DE\u30C3\u30D7" }),
-        /* @__PURE__ */ u2("p", { children: "\u30B5\u30A4\u30C8\u30DE\u30C3\u30D7.md \u304C\u898B\u3064\u304B\u308A\u307E\u305B\u3093\u3002" })
-      ] });
+      return null;
     }
     const content = toJsxRuntime(sitemap.htmlAst, {
       Fragment: S,
       jsx: u2,
       jsxs: u2
     });
-    return /* @__PURE__ */ u2("div", { class: "sitemap-sidebar", children: content });
+    return /* @__PURE__ */ u2(S, { children: [
+      /* @__PURE__ */ u2("div", { class: "sitemap-sidebar sitemap-desktop", children: content }),
+      /* @__PURE__ */ u2("details", { class: "sitemap-mobile-menu", children: [
+        /* @__PURE__ */ u2("summary", { class: "sitemap-menu-button", "aria-label": "Open sitemap", children: "\u2630" }),
+        /* @__PURE__ */ u2("div", { class: "sitemap-menu-panel", children: content })
+      ] })
+    ] });
   };
+  Component.css = example_default;
   return Component;
 });
 
