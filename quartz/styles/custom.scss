@@ -82,3 +82,9 @@ article h6::before {
     counter(h5) "-"
     counter(h6) " ";
 }
+
+section[data-footnotes] > .footnote-label {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1em;
+  font-weight: 600;
+}
