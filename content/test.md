@@ -1,7 +1,9 @@
 <table>
 	<tr>
-		<th style="width:100%">
+		<td style="width:100%; background-color:black; color:white; text-align:center; font-size:xxx-large;">
 			test
-		</th>
+		</td>
 	</tr>
 </table>
+
+
