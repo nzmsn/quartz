@@ -1,4 +1,4 @@
-<table style="border: none;">
+<table style="margin:0; border: none;">
 	<tr>
 		<td colspan="2" style="width:100vw; border:none; background-color:black; color:white; text-align:center; font-size:xxx-large;">test</td>
 	</tr>
