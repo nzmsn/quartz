@@ -1,8 +1,8 @@
-<table style="margin:0; border: none;">
-	<tr style="border-bottom: none">
+<table style="margin:0; border: none;border-bottom: none;">
+	<tr>
 		<td colspan="2" style="width:100vw; border:none; background-color:black; color:white; text-align:center; font-size:xxx-large;">test</td>
 	</tr>
-	<tr style="border-bottom: none">
+	<tr">
 		<td colspan="2"style="width:100vw; border:none; background-color:black; color:white; text-align:center; font-size:x-large;">test</td>
 	</tr>
 	<tr>
