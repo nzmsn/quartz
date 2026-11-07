@@ -1,8 +1,8 @@
 <table class="header hadean">
-	<tr class="hadean">
+	<tr>
 		<td colspan="2" class="header_title">冥王代</td>
 	</tr>
-	<tr class="hadean">
+	<tr>
 		<td colspan="2" class="header_time">45億年前 - 40億年前</td>
 	</tr>
 	<tr>
