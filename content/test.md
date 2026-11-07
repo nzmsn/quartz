@@ -10,5 +10,3 @@
 		<td style="width:50vw; borner:none; background-color:black; color:white; text-align:center;">test</td>
 	</tr>
 </table>
-
-ooo
