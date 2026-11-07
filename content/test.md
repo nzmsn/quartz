@@ -1,8 +1,8 @@
-<table style="margin:0; border: none;border-bottom: none;">
-	<tr style="width:100vw; border:none; background-color:black; color:white; text-align:center; font-size:xxx-large;">
-		<td colspan="2" >test</td>
+<table class="header">
+	<tr>
+		<td colspan="2" class="header_title">test</td>
 	</tr>
-	<tr">
+	<tr>
 		<td colspan="2"style="width:100vw; border:none; background-color:black; color:white; text-align:center; font-size:x-large;">test</td>
 	</tr>
 	<tr>
@@ -10,3 +10,5 @@
 		<td style="width:50vw; borner:none; background-color:black; color:white; text-align:center;">test</td>
 	</tr>
 </table>
+
+ooo
