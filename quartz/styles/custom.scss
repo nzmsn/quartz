@@ -89,7 +89,14 @@ section[data-footnotes] > .footnote-label {
   font-weight: 600;
 }
 
-/* ★ページのヘッダー */
+
+/* ★サイドバー調整 */
+#quartz-body > .left.sidebar > .sitemap-sidebar.sitemap-desktop {
+  min-height: 0;
+  overflow-y: auto;
+}
+
+
 /* ★ページのヘッダー */
 table.header {
   margin: 0%;
