@@ -7,7 +7,7 @@
 		<div>40億3100万年前 - 25億年前</div>
 	</div>
 	<div class="h_neighbors hadean">
-		<div class="h_neighbor hadean">◀ <a href="冥王代" style="border: 1px solid #999;">冥王代</a></div>
+		<div class="h_neighbor hadean">◀ <a href="冥王代" style="border: 3px solid red;">冥王代</a></div>
 		<div class="h_neighbor"><a href="原生代">原生代</a> ▶
 		</div>
 	</div>
