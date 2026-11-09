@@ -6,9 +6,9 @@
 		<div class="h_title">太古代</div>
 		<div>40億3100万年前 - 25億年前</div>
 	</div>
-	<div class="h_neighbors hadean">
-		<div class="h_neighbor hadean">◀ <a href="冥王代" style="border: 3px solid red;">冥王代</a></div>
-		<div class="h_neighbor"><a href="原生代">原生代</a> ▶
+	<div class="h_neighbors">
+		<div class="h_neighbor">◀ <a href="冥王代" class="hadean">冥王代</a></div>
+		<div class="h_neighbor"><a href="原生代" class="proterozoic">原生代</a> ▶
 		</div>
 	</div>
 </div>
