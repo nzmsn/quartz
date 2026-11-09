@@ -7,6 +7,7 @@ div.header {
 div.h_main {
   border-top:7px solid;
   border-bottom:7px solid;
+  margin: 2px 0;
 }
 /* ヘッダータイトル */
 div.h_title {
@@ -21,259 +22,264 @@ div.h_neighbors {
 div.h_neighbor {
   width: 50%
 }
+/* 関連ページ */
+div.header a{
+    border: 2px solid;
+}
+
 
 /* ★地球史 */
-div.earth{
-    border-color:#009cde;
+/* 地球 */
+earth{
+    border-color:#009cde !important;
 }
 
 /* 隠生代 */
-div.precambrian{
-    border-color:#f74370;
+.precambrian{
+    border-color:#f74370 !important;
 }
 
 /* 冥王代 */
-div.hadean{
-    border-color:#AE027E;
+.hadean{
+    border-color:#AE027E !important;
 }
 
 /* 太古代 */
-div.archean{
-    border-color:#F0047F;
+.archean{
+    border-color:#F0047F !important;
 }
 
 /* 原太古代 */
-div.eoarchean{
-    border-color:#e61d8c;
+.eoarchean{
+    border-color:#e61d8c !important;
 }
 
 /* 古太古代 */
-div.paleo­archean{
-    border-color:#f4449f;
+.paleo­archean{
+    border-color:#f4449f !important;
 }
 
 /* 中太古代 */
-div.meso­archean{
-    border-color:#f768a9;
+.meso­archean{
+    border-color:#f768a9 !important;
 }
 
 /* 新太古代 */
-div.neo­archean{
-    border-color:#f99bc1;
+.neo­archean{
+    border-color:#f99bc1 !important;
 }
 
 /* 原生代 */
-div.proterozoic{
-    border-color:#F73563;
+.proterozoic{
+    border-color:#F73563 !important;
 }
 
 /* 古原生代 */
-div.paleoproterozoic{
-    border-color:#f74370;
+.paleoproterozoic{
+    border-color:#f74370 !important;
 }
 
 /* 中原生代 */
-div.mesoproterozoic{
-    border-color:#fdb462;
+.mesoproterozoic{
+    border-color:#fdb462 !important;
 }
 
 /* 新原生代 */
-div.neoproterozoic{
-    border-color:#FEB342;
+.neoproterozoic{
+    border-color:#FEB342 !important;
 }
 
 /* エディアカラ紀 */
-div.ediacaran{
-    border-color:#FED96A;
+.ediacaran{
+    border-color:#FED96A !important;
 }
 
 /* 顕生代 */
-div.phanerozoic{
-    border-color:#9ad9dd;
+.phanerozoic{
+    border-color:#9ad9dd !important;
 }
 
 /* 古生代 */
-div.paleozoic{
-    border-color:#99c08d;
+.paleozoic{
+    border-color:#99c08d !important;
 }
 
 /* カンブリア紀 */
-div.cambrian{
-    border-color:#7fa056;
+.cambrian{
+    border-color:#7fa056 !important;
 }
 
 /* オルドビス紀 */
-div.ordovician{
-    border-color:#009270;
+.ordovician{
+    border-color:#009270 !important;
 }
 
 /* シルル紀 */
-div.silurian{
-    border-color:#b3e1b6;
+.silurian{
+    border-color:#b3e1b6 !important;
 }
 
 /* デボン紀 */
-div.devonian{
-    border-color:#cb8c37;
+.devonian{
+    border-color:#cb8c37 !important;
 }
 
 /* 石炭紀 */
-div.carboniferous{
-    border-color:#67a599;
+.carboniferous{
+    border-color:#67a599 !important;
 }
 
 /* ミシシッピ紀 */
-div.mississippian{
-    border-color:#678F66;
+.mississippian{
+    border-color:#678F66 !important;
 }
 
 /* ペンシルベニア紀 */
-div.pennsylvanian{
-    border-color:#99C2B5;
+.pennsylvanian{
+    border-color:#99C2B5 !important;
 }
 
 /* ペルム紀 */
-div.permian{
-    border-color:#f04028;
+.permian{
+    border-color:#f04028 !important;
 }
 
 /* 中生代 */
-div.mesozoic{
-    border-color:#67c5ca;
+.mesozoic{
+    border-color:#67c5ca !important;
 }
 
 /* 三畳紀 */
-div.triassic{
-    border-color:#812B92;
+.triassic{
+    border-color:#812B92 !important;
 }
 
 /* ジュラ紀 */
-div.jurassic{
-    border-color:#34B2C9;
+.jurassic{
+    border-color:#34B2C9 !important;
 }
 
 /* 白亜紀 */
-div.cretaceous{
-    border-color:#7FC64E;
+.cretaceous{
+    border-color:#7FC64E !important;
 }
 
 /* 後期白亜紀 */
-div.latecretaceous{
-    border-color:#A6D84A;
+.latecretaceous{
+    border-color:#A6D84A !important;
 }
 
 /* 新生代 */
-div.neozoic{
-    border-color:#f2f91d;
+.neozoic{
+    border-color:#f2f91d !important;
 }
 
 /* 古第三紀 */
-div.paleogene{
-    border-color:#fd9a52;
+.paleogene{
+    border-color:#fd9a52 !important;
 }
 
 /* 暁新世 */
-div.paleocene{
-    border-color:#fda75f;
+.paleocene{
+    border-color:#fda75f !important;
 }
 
 /* 始新世 */
-div.eocene{
-    border-color:#fdb46c;
+.eocene{
+    border-color:#fdb46c !important;
 }
 
 /* 漸新世 */
-div.oligocene{
-    border-color:#fdc07a;
+.oligocene{
+    border-color:#fdc07a !important;
 }
 
 /* 新第三紀 */
-div.neogene{
-    border-color:#ffe619;
+.neogene{
+    border-color:#ffe619 !important;
 }
 
 /* 中新世 */
-div.miocene{
-    border-color:#ffff00;
+.miocene{
+    border-color:#ffff00 !important;
 }
 
 /* 鮮新世 */
-div.pliocene{
-    border-color:#ffff99;
+.pliocene{
+    border-color:#ffff99 !important;
 }
 
 /* ピアセンジアン */
-div.piacenzian {
-    border-color:#FFFFBF;
+.piacenzian {
+    border-color:#FFFFBF !important;
 }
 
-
 /* 第四紀 */
-div.quaternary{
-    border-color:#f9f97f;
+.quaternary{
+    border-color:#f9f97f !important;
 }
 
 /* 更新世 */
-div.pleistocene{
-    border-color:#fff2ae;
+.pleistocene{
+    border-color:#fff2ae !important;
 }
 
 /* ジェラシアン */
-div.gelasian{
-    border-color:#ffedb3;
+.gelasian{
+    border-color:#ffedb3 !important;
 }
 
 /* カラブリアン */
-div.calabrian{
-    border-color:#fff2ba;
+.calabrian{
+    border-color:#fff2ba !important;
 }
 
 /* チバニアン */
-div.chibanian{
-    border-color:#fff2c7;
+.chibanian{
+    border-color:#fff2c7 !important;
 }
 
 /* 後期更新世 */
-div.latepleistocene{
-    border-color:#fff2d3;
+.latepleistocene{
+    border-color:#fff2d3 !important;
 }
 
 /* 最終間氷期 */
-div.lastinterglacial{
-    border-color:#fff4f0;
+.lastinterglacial{
+    border-color:#fff4f0 !important;
 }
 
 /* 最終氷期 */
-div.lastglacial{
-    border-color:#f0feff;
+.lastglacial{
+    border-color:#f0feff !important;
 }
 
 /* 晩氷期 */
-div.lateglacial{
-    border-color:#f3fff0;
+.lateglacial{
+    border-color:#f3fff0 !important;
 }
 
 /* 完新世 */
-div.holocene{
-    border-color:#FEF2E0;
+.holocene{
+    border-color:#FEF2E0 !important;
 }
 
 /* グリーンランディアン */
-div.greenlandian{
-    border-color:#feecdb;
+.greenlandian{
+    border-color:#feecdb !important;
 }
 
 /* ノースグリッピアン */
-div.northgrippian{
-    border-color:#fdece4;
+.northgrippian{
+    border-color:#fdece4 !important;
 }
 
 /* メガラヤン */
-div.meghalayan{
-    border-color:#fdedec;
+.meghalayan{
+    border-color:#fdedec !important;
 }
 
 /* 人新世 */
-div.anthropocene{
-    border-color:#fde6ff;
+.anthropocene{
+    border-color:#fde6ff !important;
 }
