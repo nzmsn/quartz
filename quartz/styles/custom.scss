@@ -15,6 +15,10 @@ div.h_title {
   font-weight: bold;
   font-size: xxx-large;
 }
+/* ヘッダー子供 */
+div.h_child {
+  margin: 2px 0 4px;
+}
 /* ヘッダー前後 */
 div.h_neighbors {
   display: flex;
