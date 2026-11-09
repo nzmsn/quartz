@@ -27,18 +27,26 @@
 </table>
 
 
-  <div class="header permian">
-    <div class="super">
-        <a href="古生代" class="paleozoic">▲ 古生代</a>
-    </div>
-    <div class="header_xxxl">
-        ペルム紀
-    </div>
-    <div class="period">
-        2億9890万年前 - 2億5217万年前
-    </div>
-    <div class="neighbors">
-        <a href="石炭紀" class="neighbor carboniferous">◀ 石炭紀</a>
-        <a href="三畳紀" class="neighbor triassic">三畳紀 ▶</a>
-    </div>
-  </div>
+ああああ
+
+<div class="header">
+	<hr style="border: none; border-top: 8px solid #999; width: 100%;">
+	<div>
+		先カンブリア時代
+	</div>
+	<div>
+	40億3100万年前 - 5億3880万年前
+	</div>
+	<hr style="border: none; border-top: 8px solid #999; width: 100%;">
+	<div>
+		<div></div>
+		<div><a href="顕生代">顕生代 ▶</a></div>
+	</div>
+	<div>
+		▼
+		<a href="冥王代">冥王代</a>
+		<a href="太古代">太古代</a>
+		<a href="原生代">原生代</a>
+	</div>
+</div>
+
