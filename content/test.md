@@ -30,14 +30,14 @@
 ああああ
 
 <div class="header">
-	<hr style="border: none; border-top: 8px solid #999; width: 100%;">
+	<hr style="border: none; border-top: 8px solid #999; width: 100%; margin:0%">
 	<div>
 		先カンブリア時代
 	</div>
 	<div>
 	40億3100万年前 - 5億3880万年前
 	</div>
-	<hr style="border: none; border-top: 8px solid #999; width: 100%;">
+	<hr style="border: none; border-top: 8px solid #999; width: 100%; margin:0%">
 	<div>
 		<div></div>
 		<div><a href="顕生代">顕生代 ▶</a></div>
