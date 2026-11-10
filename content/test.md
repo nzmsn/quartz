@@ -15,8 +15,8 @@
 			<summary class="archean" style="border:2px solid;border-radius:5px;padding-left:8px;">
 				<a href="太古代" class="precambrian">太古代</a>
 			</summary>
-			<div>
-				<a href="原太古代" class="eoarchean">原太古代</a>
+			<div style="padding-left: 10px; ">
+				<a href="原太古代" style="border: 2px solid;" class="eoarchean">原太古代</a>
 				<a href="古太古代" class="paleo­archean">古太古代</a>
 				<a href="中太古代" class="meso­archean">中太古代</a>
 				<a href="新太古代" class="neo­archean">新太古代</a>
