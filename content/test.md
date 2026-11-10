@@ -2,7 +2,7 @@
 
 
 <details class="earth"> 
-<summary class="earth" style="border:2px solid;">🐡ああああ</summary>
+<summary class="earth" style="border:2px solid;border-radius:5px; padding-left:5px;">🐡<a href="先カンブリア時代" class="precambrian">先カンブリア時代</a></summary>
 🐈いいいい
 </details>
 
