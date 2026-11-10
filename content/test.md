@@ -1,17 +1,27 @@
-<div class="header">
+<div class="header" style="width:30%">
 	<div class="h_parent">
-		▲ <a href="先カンブリア時代" class="precambrian">先カンブリア時代</a>
+		▲ <a href="顕生代" class="phanerozoic">顕生代</a>
 	</div>
-	<div class="h_main archean">
-		<div class="h_title">太古代</div>
-		<div>40億3100万年前 - 25億年前</div>
+	<div class="h_main paleozoic">
+		<div class="h_title" >先カンブリア時代</div>
+		<div class="h_child" style="line-height: 1.8">
+			▼
+			<a href="カンブリア紀" class="cambrian">カンブリア紀</a>
+			<a href="オルドビス紀" class="ordovician">オルドビス紀</a>
+			<a href="シルル紀" class="silurian">シルル紀</a>
+			<a href="デボン紀" class="devonian">デボン紀</a>
+			<a href="石炭紀" class="carboniferous">石炭紀</a>
+			<a href="ペルム紀" class="permian">ペルム紀</a>
+		</div>
 	</div>
 	<div class="h_neighbors">
-		<div class="h_neighbor">◀ <a href="冥王代" class="hadean">冥王代</a></div>
-		<div class="h_neighbor"><a href="原生代" class="proterozoic">原生代</a> ▶
+		<div class="h_neighbor">◀ <a href="新原生代" class="neoproterozoic">新原生代</a></div>
+		<div class="h_neighbor"><a href="中生代" class="mesozoic">中生代</a> ▶
 		</div>
 	</div>
 </div>
+
+# 古生代
 
 
 <details> <summary>🐡ああああ</summary>
