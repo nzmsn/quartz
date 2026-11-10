@@ -159,9 +159,10 @@ summary.nav_hdr {
 /* サブdiv */
 div.nav_subs {
   padding-left: 10px;
+  padding-right: 5px;
   display: grid;
-  gap: 2px;
-  padding-block: 2px;
+  gap: 5px;
+  padding-block: 6px;
   line-height: 1.8;
 }
 
@@ -174,6 +175,8 @@ summary.nav_sub_hdr {
 
 /* 一覧 */
 div.nav_list {
+  padding-top: 4px;
+  padding-bottom: 4px;
   padding-left: 10px;
 }
 
