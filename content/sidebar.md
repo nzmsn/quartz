@@ -1,3 +1,4 @@
+
 <details class="navbox"> 
 	<summary class="nav_hdr earth">
 		<a class="earth">🌏地球史</a>
