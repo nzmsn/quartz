@@ -15,9 +15,20 @@ div.h_title {
   font-weight: bold;
   font-size: xxx-large;
 }
+div.h_title_xx {
+  text-align:center;
+  font-weight: bold;
+  font-size: xx-large;
+}
+div.h_title_x {
+  text-align:center;
+  font-weight: bold;
+  font-size: x-large;
+}
 /* ヘッダー子供 */
 div.h_child {
   margin: 2px 0 4px;
+  line-height: 1.8;
 }
 /* ヘッダー前後 */
 div.h_neighbors {
