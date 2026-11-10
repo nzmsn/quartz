@@ -89,6 +89,13 @@ article h6::before {
   overflow-y: auto;
 }
 
+/* ★脚注 */
+section[data-footnotes] > .footnote-label {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1em;
+  font-weight: 600;
+}
+
 /* ★ページのヘッダ */
 div.header {
   width: 100%;
