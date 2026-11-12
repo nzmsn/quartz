@@ -25,9 +25,20 @@
 						<a href="新太古代" class="neo­archean">新太古代</a>
 					</div>
 				</details>
+				<details  class="navbox"> 
+					<summary class="nav_sub_hdr archean ">
+						<a href="原生代" class="proterozoic">原生代</a>
+					</summary>
+					<div class="nav_list">
+						<a href="古原生代" class="paleoproterozoic">古太古代</a>
+						<a href="中原生代" class="mesoproterozoic">中太古代</a>
+						<a href="新原生代" class="neoproterozoic">新太古代</a>
+					</div>
+				</details>
 			</div>
 		</details>
 	</div>
 </details>
+
 
 
