@@ -71,11 +71,32 @@
 					<summary class="nav_sub_hdr neozoic ">
 						<a href="新生代">新生代</a>
 					</summary>
-					<div class="nav_list">
-						<a href="古第三紀" class="paleogene">古第三紀</a>
-						<a href="新第三紀" class="neogene">新第三紀</a>
-						<a href="第四紀" class="quaternary">第四紀</a>
-					</div>
+				<div class="nav_subs">
+					<details class="navbox"> 
+						<summary class="nav_sub_hdr paleogene ">
+							<a href="古第三紀">古第三紀</a>
+						</summary>
+						<div class="nav_list">
+							<a href="暁新世" class="paleocene">暁新世</a>
+							<a href="始新世" class="eocene">始新世</a>
+							<a href="漸新世" class="oligocene">漸新世</a>
+						</div>
+					</details>
+					<details  class="navbox"> 
+						<summary class="nav_sub_hdr neogene ">
+							<a href="新第三紀">新第三紀</a>
+						</summary>
+						<div class="nav_list">
+							<a href="中新世" class="miocene">中新世</a>
+							<a href="鮮新世" class="pliocene">鮮新世</a>
+						</div>
+					</details>
+					<details  class="navbox"> 
+						<summary class="nav_sub_hdr quaternary ">
+							<a href="第四紀">第四紀</a>
+						</summary>
+					</details>
+				</div>
 				</details>
 			</div>
 		</details>
