@@ -61,6 +61,11 @@
 					<summary class="nav_sub_hdr mesozoic ">
 						<a href="中生代">中生代</a>
 					</summary>
+					<div class="nav_list">
+						<a href="三畳紀" class="triassic">三畳紀</a>
+						<a href="ジュラ紀" class="jurassic">ジュラ紀</a>
+						<a href="白亜紀" class="cretaceous">白亜紀</a>
+					</div>
 				</details>
 				<details  class="navbox"> 
 					<summary class="nav_sub_hdr neozoic ">
