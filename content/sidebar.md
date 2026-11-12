@@ -95,6 +95,34 @@
 						<summary class="nav_sub_hdr quaternary ">
 							<a href="第四紀">第四紀</a>
 						</summary>
+						<div class="nav_subs">
+							<details class="navbox"> 
+								<summary class="nav_sub_hdr pleistocene ">
+									<a href="更新世">更新世</a>
+								</summary>
+								<div class="nav_list">
+									<a href="ジェラシアン" class="gelasian">ジェラシアン</a>
+									<a href="カラブリアン" class="calabrian">カラブリアン</a>
+									<a href="チバニアン" class="chibanian">チバニアン</a>
+									<a href="後期更新世" class="latepleistocene">後期更新世</a>
+								</div>
+							</details>
+							<details  class="navbox"> 
+								<summary class="nav_sub_hdr holocene ">
+									<a href="完新世">完新世</a>
+								</summary>
+								<div class="nav_list">
+									<a href="グリーンランディアン" class="greenlandian">グリーンランディアン</a>
+									<a href="ノースグリッピアン" class="northgrippian">ノースグリッピアン</a>
+									<a href="メガラヤン" class="meghalayan">メガラヤン</a>
+								</div>
+							</details>
+							<details  class="navbox"> 
+								<summary class="nav_sub_hdr anthropocene ">
+									<a href="人新世">人新世</a>
+								</summary>
+							</details>
+						</div>
 					</details>
 				</div>
 				</details>
