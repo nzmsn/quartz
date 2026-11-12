@@ -48,6 +48,14 @@
 					<summary class="nav_sub_hdr paleozoic ">
 						<a href="古生代">古生代</a>
 					</summary>
+					<div class="nav_list">
+						<a href="カンブリア紀" class="cambrian">カンブリア紀</a>
+						<a href="オルドビス紀" class="ordovician">オルドビス紀</a>
+						<a href="シルル紀" class="silurian">シルル紀</a>
+						<a href="デボン紀" class="devonian">デボン紀</a>
+						<a href="石炭紀" class="carboniferous">石炭紀</a>
+						<a href="ペルム紀" class="permian">ペルム紀</a>
+					</div>
 				</details>
 				<details  class="navbox"> 
 					<summary class="nav_sub_hdr mesozoic ">
