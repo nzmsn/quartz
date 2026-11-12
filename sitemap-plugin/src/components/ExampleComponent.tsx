@@ -6,7 +6,7 @@ import type {
 import { toJsxRuntime } from "hast-util-to-jsx-runtime";
 import { Fragment, jsx, jsxs } from "preact/jsx-runtime";
 import style from "./styles/example.scss";
-
+import sitemapState from "./scripts/sitemap-state.inline";
 
 export default (() => {
   const Component: QuartzComponent = (props: QuartzComponentProps) => {
@@ -44,6 +44,7 @@ return (
   };
 
   Component.css = style;
+  Component.afterDOMLoaded = sitemapState;
 
   return Component;
 }) satisfies QuartzComponentConstructor;
