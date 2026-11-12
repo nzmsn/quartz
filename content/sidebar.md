@@ -71,11 +71,17 @@
 					<summary class="nav_sub_hdr neozoic ">
 						<a href="新生代">新生代</a>
 					</summary>
+					<div class="nav_list">
+						<a href="古第三紀" class="paleogene">古第三紀</a>
+						<a href="新第三紀" class="neogene">新第三紀</a>
+						<a href="第四紀" class="quaternary">第四紀</a>
+					</div>
 				</details>
 			</div>
 		</details>
 	</div>
 </details>
+
 
 
 
