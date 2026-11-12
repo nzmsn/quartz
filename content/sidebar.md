@@ -119,7 +119,7 @@
 							</details>
 							<details  class="navbox"> 
 								<summary class="nav_sub_hdr anthropocene ">
-									<a href="人新世">人新世</a>
+									(<a href="人新世">人新世</a>)
 								</summary>
 							</details>
 						</div>
