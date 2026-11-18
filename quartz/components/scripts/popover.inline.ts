@@ -10,6 +10,7 @@ async function mouseEnterHandler(
   { clientX, clientY }: { clientX: number; clientY: number },
 ) {
   const link = (activeAnchor = this)
+  if (useFootnoteSheet()) return
   if (link.dataset.noPopover === "true") {
     return
   }
@@ -154,3 +155,95 @@ function setupPopovers() {
 
 document.addEventListener("nav", setupPopovers)
 document.addEventListener("render", setupPopovers)
+
+// Mobile footnotes use a modal bottom sheet instead of hover previews.
+function useFootnoteSheet() {
+  return window.matchMedia("(max-width: 800px), (hover: none)").matches
+}
+
+let footnoteDialog: HTMLDialogElement | null = null
+let footnoteTrigger: HTMLAnchorElement | null = null
+
+function closeFootnoteSheet(restoreFocus = true) {
+  if (!footnoteDialog) return
+  footnoteDialog.close()
+  footnoteDialog.remove()
+  footnoteDialog = null
+  document.documentElement.classList.remove("footnote-sheet-open")
+  if (restoreFocus && footnoteTrigger?.isConnected) footnoteTrigger.focus({ preventScroll: true })
+  footnoteTrigger = null
+}
+
+document.addEventListener("click", (event: MouseEvent) => {
+  if (!useFootnoteSheet() || event.button !== 0) return
+  if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
+  const target = event.target
+  if (!(target instanceof Element)) return
+  const link = target.closest<HTMLAnchorElement>("a[data-footnote-ref]")
+  if (!link || link.dataset.noPopover === "true") return
+
+  // Read the current page's footnote directly, without a network request.
+  const url = new URL(link.href)
+  const current = new URL(window.location.href)
+  if (url.origin !== current.origin || url.pathname !== current.pathname) return
+  let id: string
+  try {
+    id = decodeURIComponent(url.hash.slice(1))
+  } catch {
+    return
+  }
+  const footnote = document.getElementById(id)
+  if (!footnote || footnote.tagName !== "LI") return
+
+  event.preventDefault()
+  event.stopImmediatePropagation()
+  clearActivePopover()
+  closeFootnoteSheet(false)
+  footnoteTrigger = link
+
+  const dialog = document.createElement("dialog")
+  dialog.className = "mobile-footnote-sheet"
+  dialog.setAttribute("aria-labelledby", "mobile-footnote-title")
+
+  const header = document.createElement("header")
+  header.className = "mobile-footnote-header"
+  const title = document.createElement("h2")
+  title.id = "mobile-footnote-title"
+  title.textContent = `脚注 ${link.textContent?.trim() ?? ""}`
+  const close = document.createElement("button")
+  close.type = "button"
+  close.className = "mobile-footnote-close"
+  close.setAttribute("aria-label", "脚注を閉じる")
+  close.textContent = "×"
+  close.autofocus = true
+  close.addEventListener("click", () => closeFootnoteSheet())
+  header.append(title, close)
+
+  const body = document.createElement("div")
+  body.className = "mobile-footnote-body"
+  const note = footnote.cloneNode(true) as HTMLElement
+  note.querySelectorAll("[data-footnote-backref]").forEach((el) => el.remove())
+  note.removeAttribute("id")
+  note.querySelectorAll("[id]").forEach((el) => el.removeAttribute("id"))
+  // Keep paragraphs, citations, and links, without the list marker.
+  body.append(...Array.from(note.childNodes))
+  dialog.append(header, body)
+
+  dialog.addEventListener("click", (click) => {
+    if (click.target !== dialog) return
+    const rect = dialog.getBoundingClientRect()
+    if (click.clientX < rect.left || click.clientX > rect.right ||
+        click.clientY < rect.top || click.clientY > rect.bottom) closeFootnoteSheet()
+  })
+  dialog.addEventListener("cancel", (cancel) => {
+    cancel.preventDefault()
+    closeFootnoteSheet()
+  })
+  document.body.appendChild(dialog)
+  footnoteDialog = dialog
+  dialog.showModal()
+  document.documentElement.classList.add("footnote-sheet-open")
+}, true)
+
+document.addEventListener("nav", () => closeFootnoteSheet(false))
+window.addEventListener("pagehide", () => closeFootnoteSheet(false))
