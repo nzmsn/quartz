@@ -29,7 +29,7 @@ async function mouseEnterHandler(
     popoverElement.classList.add("active-popover")
     setPosition(popoverElement as HTMLElement)
 
-    if (hash !== "") {
+    if (hash !== "" && !isFootnote) {
       const inner = popoverElement.querySelector(".popover-inner") as HTMLElement | null
       if (inner) {
         const targetAnchor = `#popover-internal-${hash.slice(1)}`
@@ -44,9 +44,10 @@ async function mouseEnterHandler(
 
   const targetUrl = new URL(link.href)
   const hash = decodeURIComponent(targetUrl.hash)
+  const isFootnote = link.hasAttribute("data-footnote-ref") && hash !== ""
   targetUrl.hash = ""
   targetUrl.search = ""
-  const popoverId = `popover-${link.pathname}`
+  const popoverId = `popover-${link.pathname}${isFootnote ? hash : ""}`
   const prevPopoverElement = document.getElementById(popoverId)
 
   // dont refetch if there's already a popover
@@ -101,10 +102,24 @@ async function mouseEnterHandler(
         const targetID = `popover-internal-${el.id}`
         el.id = targetID
       })
-      const elts = [...html.getElementsByClassName("popover-hint")]
-      if (elts.length === 0) return
+      if (isFootnote) {
+        const footnote = html.getElementById(`popover-internal-${hash.slice(1)}`)
+        if (!footnote || footnote.tagName !== "LI") return
 
-      elts.forEach((elt) => popoverInner.appendChild(elt))
+        const note = footnote.cloneNode(true) as HTMLElement
+        note.querySelectorAll("[data-footnote-backref]").forEach((el) => el.remove())
+
+        const list = document.createElement("ol")
+        const number = Number.parseInt(link.textContent?.trim() ?? "", 10)
+        if (Number.isFinite(number) && number > 0) list.start = number
+        list.appendChild(note)
+        popoverInner.appendChild(list)
+      } else {
+        const elts = [...html.getElementsByClassName("popover-hint")]
+        if (elts.length === 0) return
+
+        elts.forEach((elt) => popoverInner.appendChild(elt))
+      }
   }
 
   if (!!document.getElementById(popoverId)) {
