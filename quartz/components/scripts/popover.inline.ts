@@ -144,6 +144,11 @@ function clearActivePopover() {
 function setupPopovers() {
   const links = [...document.querySelectorAll("a.internal")] as HTMLAnchorElement[]
   for (const link of links) {
+    // Let native anchor navigation update CSS :target for footnotes.
+    // Mobile footnotes are still intercepted by the bottom-sheet handler.
+    if (link.hasAttribute("data-footnote-ref")) {
+      link.dataset.routerIgnore = ""
+    }
     link.addEventListener("mouseenter", mouseEnterHandler)
     link.addEventListener("mouseleave", clearActivePopover)
     window.addCleanup(() => {
