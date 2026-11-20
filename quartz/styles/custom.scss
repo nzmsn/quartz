@@ -9,6 +9,11 @@ article {
   counter-reset: h1 h2 h3 h4 h5 h6;
 }
 
+/* 本文と同じ見出し番号を目次にも表示する */
+.toc a[data-heading-number]::before {
+  content: attr(data-heading-number) " ";
+}
+
 /* H1 */
 article h1 {
   counter-increment: h1;
