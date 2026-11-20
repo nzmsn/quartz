@@ -12,7 +12,9 @@ document.addEventListener("nav", () => {
     if (heading.id) numbers.set(heading.id, counters.slice(0, level).join("-"))
   }
 
-  for (const link of document.querySelectorAll<HTMLAnchorElement>(".toc a[data-for]")) {
+  for (const link of document.querySelectorAll<HTMLAnchorElement>(
+    ".toc a[data-for], .mobile-toc-panel a[data-for]",
+  )) {
     const number = numbers.get(link.dataset.for ?? "")
     if (number) link.dataset.headingNumber = number
     else delete link.dataset.headingNumber
