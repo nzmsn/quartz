@@ -27,15 +27,15 @@
   }
   .mobile-site-header {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: 0.25rem;
     position: fixed;
     inset: 0 0 auto;
     z-index: 1000;
     min-height: calc(4rem + env(safe-area-inset-top, 0px));
     box-sizing: border-box;
-    padding: calc(1.25rem - 1px + env(safe-area-inset-top, 0px))
-      max(0.5rem, env(safe-area-inset-right, 0px)) 0 max(0.5rem, env(safe-area-inset-left, 0px));
+    padding: env(safe-area-inset-top, 0px) max(0.5rem, env(safe-area-inset-right, 0px)) 0
+      max(0.5rem, env(safe-area-inset-left, 0px));
     background: var(--light);
     border-bottom: 1px solid var(--lightgray);
     color: var(--dark);
@@ -79,21 +79,20 @@
   .mobile-site-home {
     display: flex;
     align-items: center;
-    min-height: 2.75rem;
-    min-width: 0;
-    flex: 1 1 0;
-    font-family: var(--headerFont);
-    font-weight: 600;
-    line-height: 1.2;
-    span {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+    justify-content: center;
+    box-sizing: border-box;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex: 0 0 2.75rem;
+    border: 1px solid var(--lightgray);
+    border-radius: 6px;
+    font-size: 1.25rem;
+    line-height: 1;
   }
   .mobile-header-tools {
     display: flex;
     flex: 0 0 auto;
+    margin-inline-start: auto;
     align-items: center;
     > .flex-component {
       gap: 0.25rem !important;

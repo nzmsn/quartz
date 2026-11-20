@@ -54,9 +54,10 @@ export default (() => {
           <a
             class="mobile-site-home"
             href={`${pathToRoot(props.fileData.slug!)}/`}
-            title={props.cfg.pageTitle}
+            title="ホーム"
+            aria-label="ホームへ戻る"
           >
-            <span>{props.cfg.pageTitle}</span>
+            <span aria-hidden="true">🏠</span>
           </a>
           <div class="mobile-header-tools" />
         </nav>

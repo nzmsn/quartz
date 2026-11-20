@@ -52,10 +52,11 @@ describe("mobile site header", () => {
     expect(html).toContain('class="mobile-toc-menu"');
     expect(html).not.toContain('class="sitemap-mobile-menu"');
   });
-  it("provides a toolbar mount and preserves the full home title for narrow screens", () => {
+  it("provides a toolbar mount and an accessible icon-only home button", () => {
     const html = page();
     expect(html).toContain('class="mobile-header-tools"');
-    expect(html).toContain('title="私のWiki"');
-    expect(html).toContain("<span>私のWiki</span>");
+    expect(html).toContain('aria-label="ホームへ戻る"');
+    expect(html).toContain('<span aria-hidden="true">🏠</span>');
+    expect(html).not.toContain("私のWiki");
   });
 });
