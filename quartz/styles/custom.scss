@@ -536,3 +536,12 @@ dialog.mobile-footnote-sheet {
     img { max-width: 100%; height: auto; }
   }
 }
+
+
+/* 脚注記号のクリックで移動した先を強調 */
+section[data-footnotes] li:target {
+  background-color: rgba(255, 210, 80, 0.22);
+  border-radius: 4px;
+  box-shadow: 0 0 0 4px rgba(255, 210, 80, 0.22);
+  scroll-margin-top: 5rem;
+}
