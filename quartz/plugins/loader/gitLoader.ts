@@ -3,6 +3,8 @@ import path from "path"
 import { execSync } from "child_process"
 import git from "isomorphic-git"
 import http from "isomorphic-git/http/node"
+// @ts-expect-error The CLI helper is JavaScript without a declaration file.
+import { symlinkOrCopySync } from "../../cli/helpers.js"
 import { styleText } from "util"
 import { fileURLToPath } from "node:url"
 import { pathToFileURL } from "url"
@@ -322,7 +324,7 @@ function findPluginByPackageName(packageName: string): string | null {
  */
 function trySymlink(target: string, linkPath: string): void {
   try {
-    fs.symlinkSync(target, linkPath, "dir")
+    symlinkOrCopySync(target, linkPath)
   } catch (err: unknown) {
     if ((err as NodeJS.ErrnoException).code === "EEXIST") return
     throw err
@@ -473,7 +475,7 @@ export async function installPlugin(
       console.log(styleText("cyan", `→`), `Linking ${spec.name} from ${spec.repo}...`)
     }
 
-    fs.symlinkSync(spec.repo, pluginDir, "dir")
+    symlinkOrCopySync(spec.repo, pluginDir)
 
     if (options.verbose) {
       console.log(styleText("green", `✓`), `Linked ${spec.name}`)

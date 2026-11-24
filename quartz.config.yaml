@@ -130,7 +130,9 @@ plugins:
       display: all
   - source: "@quartz-community/alias-redirects"
     enabled: true
-  - source: github:nzmsn/quartz-heading-redirect
+  - source:
+      repo: ./heading-redirect-plugin
+      name: heading-redirect
     enabled: true
     order: 90
   - source: "@quartz-community/content-index"
@@ -162,7 +164,9 @@ plugins:
     layout:
       position: right
       priority: 10
-  - source: "@quartz-community/search"
+  - source:
+      repo: ./search-plugin
+      name: search
     enabled: true
     layout:
       position: left

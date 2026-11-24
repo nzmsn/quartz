@@ -1,20 +1,32 @@
 {
   "version": "1.0.0",
   "plugins": {
-    "quartz-heading-redirect": {
-      "source": "https://github.com/nzmsn/quartz-heading-redirect",
-      "resolved": "https://github.com/nzmsn/quartz-heading-redirect",
-      "commit": "bf93d00049ec9276cf29375fc03a25fe4a1baf86",
-      "installedAt": "2026-10-26T03:22:25.086Z"
+    "heading-redirect": {
+      "source": {
+        "repo": "./heading-redirect-plugin",
+        "name": "heading-redirect"
+      },
+      "resolved": "C:\\Users\\hakaw\\quartz\\heading-redirect-plugin",
+      "commit": "local",
+      "installedAt": "2026-11-24T11:52:23.047Z"
+    },
+    "search": {
+      "source": {
+        "repo": "./search-plugin",
+        "name": "search"
+      },
+      "resolved": "C:\\Users\\hakaw\\quartz\\search-plugin",
+      "commit": "local",
+      "installedAt": "2026-11-24T11:52:23.050Z"
     },
     "sitemap": {
       "source": {
         "repo": "./sitemap-plugin",
         "name": "sitemap"
       },
-      "resolved": "C:\\Users\\hakaw\\quartz\\sitemap-plugin",
+      "resolved": "./sitemap-plugin",
       "commit": "local",
-      "installedAt": "2026-10-26T08:28:48.033Z"
+      "installedAt": "2026-11-24T07:12:55.611Z"
     }
   }
 }
