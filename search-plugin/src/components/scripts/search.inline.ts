@@ -1,4 +1,5 @@
 import FlexSearch from "flexsearch";
+import { YomiIndex } from "./yomi";
 import {
   removeAllChildren,
   normalizeRelativeURLs,
@@ -80,6 +81,7 @@ const index = new FlexSearch.Document({
   },
 });
 
+const yomiIndex = new YomiIndex();
 let contentData: Record<string, Item> | null = null;
 let idDataMap: string[] = [];
 let allTags: string[] = [];
@@ -475,7 +477,13 @@ async function setupSearch() {
         return matched.length === 0 ? [] : ([...matched[0].result] as number[]);
       };
 
-      const allIds: Set<number> = new Set(fieldPriority.flatMap((field) => getByField(field)));
+      // Tag filters below apply to reading matches as well as full-text matches.
+      const readingIds = parsed.query ? yomiIndex.search(parsed.query) : [];
+      const prioritizedIds = fieldPriority.flatMap((field) =>
+        field === "title" ? [...getByField(field), ...readingIds] : getByField(field),
+      );
+      if (!fieldPriority.includes("title")) prioritizedIds.unshift(...readingIds);
+      const allIds: Set<number> = new Set(prioritizedIds);
 
       const filteredIds = [...allIds].filter((id) => {
         if (parsed.tags.length === 0) return true;
@@ -795,6 +803,7 @@ async function fillDocument() {
     const fileData = contentData[slug];
     if (!fileData) continue;
     idDataMap[id] = slug;
+    yomiIndex.add(id, fileData.yomi);
     for (const tag of fileData.tags || []) tagSet.add(tag);
     promises.push(
       index.addAsync(id, {
@@ -835,6 +844,7 @@ async function addContentIndexEntries(patch: Record<string, Item>): Promise<numb
     if (!fileData) continue;
     const id = idDataMap.length;
     idDataMap[id] = slug;
+    yomiIndex.add(id, fileData.yomi);
     contentData[slug] = fileData;
     for (const tag of fileData.tags || []) tagSet.add(tag);
     await index.addAsync(id, {
